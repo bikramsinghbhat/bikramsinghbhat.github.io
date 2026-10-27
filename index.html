@@ -200,6 +200,10 @@ nav.links a.active::after{
 .img-frame .ph-icon svg{width:20px;height:20px;}
 .img-frame .ph-label{font-family:var(--font-mono);font-size:11.5px;color:var(--text-dim);letter-spacing:.03em;line-height:1.6;}
 .img-frame .ph-ratio{font-family:var(--font-mono);font-size:10.5px;color:var(--text-faint);margin-top:6px;display:block;}
+
+.img-frame.has-img{border-color:var(--border);background:var(--bg-raised);}
+.img-frame.has-img::before{display:none;}
+.img-frame img{position:absolute;inset:0;width:100%;height:100%;}
 .img-frame.portrait{aspect-ratio:4/5;}
 .img-frame.wide{aspect-ratio:16/9;}
 .img-frame.square{aspect-ratio:1/1;}
@@ -491,7 +495,7 @@ footer{border-top:1px solid var(--border-soft);padding:44px 0 34px;margin-top:40
           <p>My academic work has allowed me to work with desktop applications, databases, web technologies, embedded systems, computer vision, and machine learning–related technologies — mainly through coursework and my graduation project rather than professional experience.</p>
           <p>Outside technology, I am also a licensed Light Sport Aircraft Pilot. Aviation has developed my interest in discipline, responsibility, situational awareness, and the relationship between technology and aviation.</p>
         </div>
-        <div class="img-frame portrait">
+        <div class="img-frame portrait" data-img="portrait" data-alt="Portrait of Bikram Singh Bhat" data-fit="cover">
           <div class="ph-content">
             <div class="ph-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.5-7 8-7s8 3 8 7"/></svg></div>
             <div class="ph-label">PERSONAL PORTRAIT<br>REPLACE WITH MY PHOTO</div>
@@ -520,7 +524,7 @@ footer{border-top:1px solid var(--border-soft);padding:44px 0 34px;margin-top:40
             <div class="stat"><div class="num">Sokcho</div><div class="lbl">SOUTH KOREA</div></div>
           </div>
         </div>
-        <div class="img-frame wide">
+        <div class="img-frame wide" data-img="university" data-alt="Kyungdong University Global" data-fit="cover">
           <div class="ph-content">
             <div class="ph-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 10l9-6 9 6-9 6-9-6Z"/><path d="M7 12v5c0 1.5 2.5 3 5 3s5-1.5 5-3v-5"/></svg></div>
             <div class="ph-label">KYUNGDONG UNIVERSITY GLOBAL<br>REPLACE WITH MY PHOTO</div>
@@ -651,7 +655,7 @@ footer{border-top:1px solid var(--border-soft);padding:44px 0 34px;margin-top:40
 
         <!-- Project 1 -->
         <article class="project-card show" data-cat="software">
-          <div class="img-frame wide" style="margin-bottom:18px;">
+          <div class="img-frame wide" style="margin-bottom:18px;" data-img="billing-system" data-alt="Screenshot of the Electricity Billing System desktop application" data-fit="contain">
             <div class="ph-content">
               <div class="ph-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8M12 18v3"/></svg></div>
               <div class="ph-label">ELECTRICITY BILLING SYSTEM SCREENSHOT<br>REPLACE WITH MY SCREENSHOT</div>
@@ -683,7 +687,7 @@ footer{border-top:1px solid var(--border-soft);padding:44px 0 34px;margin-top:40
 
         <!-- Project 2 -->
         <article class="project-card show" data-cat="embedded">
-          <div class="img-frame wide" style="margin-bottom:18px;">
+          <div class="img-frame wide" style="margin-bottom:18px;" data-img="fire-detection" data-alt="Fire detection and suppression system prototype" data-fit="cover">
             <div class="ph-content">
               <div class="ph-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v6M12 22a8 8 0 0 0 8-8c0-4-8-12-8-12s-8 8-8 12a8 8 0 0 0 8 8Z"/></svg></div>
               <div class="ph-label">FIRE DETECTION PROJECT PHOTO<br>REPLACE WITH MY PHOTO</div>
@@ -768,7 +772,7 @@ footer{border-top:1px solid var(--border-soft);padding:44px 0 34px;margin-top:40
 
         <!-- Project 4 -->
         <article class="project-card show" data-cat="web">
-          <div class="img-frame wide" style="margin-bottom:18px;">
+          <div class="img-frame wide" style="margin-bottom:18px;" data-img="department-website" data-alt="Preview of the Smart Computing Department Website" data-fit="contain">
             <div class="ph-content">
               <div class="ph-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 8h18M7 12h4"/></svg></div>
               <div class="ph-label">WEBSITE PREVIEW<br>SCREENSHOT TO BE ADDED</div>
@@ -824,7 +828,7 @@ footer{border-top:1px solid var(--border-soft);padding:44px 0 34px;margin-top:40
                   View on GitHub
                 </a>
               </div>
-              <div class="img-frame wide" style="margin-top:18px;">
+              <div class="img-frame wide" style="margin-top:18px;" data-img="graduation-project" data-alt="Student Distraction Detection System graduation project" data-fit="contain">
                 <div class="ph-content">
                   <div class="ph-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="13" rx="2"/><path d="M8 21h8M9 9l3 3 5-5"/></svg></div>
                   <div class="ph-label">GRADUATION PROJECT SCREENSHOT / PHOTO<br>REPLACE WITH MY ACTUAL PROJECT IMAGE</div>
@@ -922,13 +926,13 @@ footer{border-top:1px solid var(--border-soft);padding:44px 0 34px;margin-top:40
           <p style="font-size:13.5px;">Certificate issued by the Association of Malaysian Environment-Behaviour Researchers (AMER).</p>
         </div>
         <div class="two-col" style="gap:16px;">
-          <div class="img-frame square">
+          <div class="img-frame square" data-img="conference" data-alt="Bikram Singh Bhat presenting at the conference" data-fit="cover">
             <div class="ph-content">
               <div class="ph-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="9" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg></div>
               <div class="ph-label">CONFERENCE / ORAL PRESENTATION PHOTO<br>REPLACE WITH MY PHOTO</div>
             </div>
           </div>
-          <div class="img-frame square">
+          <div class="img-frame square" data-img="oral-presenter-certificate" data-alt="Oral Presenter certificate, AMER" data-fit="contain">
             <div class="ph-content">
               <div class="ph-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16v12H4z"/><path d="M9 21h6l-1-5H10l-1 5Z"/></svg></div>
               <div class="ph-label">ORAL PRESENTER CERTIFICATE<br>REPLACE WITH MY CERTIFICATE</div>
@@ -982,14 +986,14 @@ footer{border-top:1px solid var(--border-soft);padding:44px 0 34px;margin-top:40
       </div>
 
       <div class="two-col" style="margin-top:32px;">
-        <div class="img-frame wide">
+        <div class="img-frame wide" data-img="pilot" data-alt="Bikram Singh Bhat in an aviation setting" data-fit="cover">
           <div class="ph-content">
             <div class="ph-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.5-7 8-7s8 3 8 7"/></svg></div>
             <div class="ph-label">PILOT / AVIATION PHOTO<br>REPLACE WITH MY PHOTO</div>
             <span class="ph-ratio">recommended 16:9</span>
           </div>
         </div>
-        <div class="img-frame wide">
+        <div class="img-frame wide" data-img="aircraft" data-alt="Savannah VG Bingo aircraft" data-fit="cover">
           <div class="ph-content">
             <div class="ph-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 16l7-2 3-7 2 .5-1.5 6.5 6-1 1 2-6 2-3 5-2-.5 1-4.5-7 2z"/></svg></div>
             <div class="ph-label">AIRCRAFT PHOTO — SAVANNAH VG BINGO<br>REPLACE WITH MY PHOTO</div>
@@ -1017,7 +1021,7 @@ footer{border-top:1px solid var(--border-soft);padding:44px 0 34px;margin-top:40
           <div class="tl-issuer">Kyungdong University</div>
           <p style="font-size:13.5px;">Participated in a student leadership development workshop.</p>
           <span class="note-tag">Workshop participation, not a professional qualification</span>
-          <div class="img-frame wide" style="margin-top:14px;max-width:400px;">
+          <div class="img-frame wide" style="margin-top:14px;max-width:400px;" data-img="leadership-certificate" data-alt="Student Leadership Workshop certificate" data-fit="contain">
             <div class="ph-content"><div class="ph-label">STUDENT LEADERSHIP WORKSHOP CERTIFICATE<br>REPLACE WITH MY CERTIFICATE</div></div>
           </div>
         </div>
@@ -1026,7 +1030,7 @@ footer{border-top:1px solid var(--border-soft);padding:44px 0 34px;margin-top:40
           <span class="tl-date mono">MAY 2024</span>
           <h4>Best Student of the Month</h4>
           <div class="tl-issuer">Kyungdong University Global</div>
-          <div class="img-frame wide" style="margin-top:14px;max-width:400px;">
+          <div class="img-frame wide" style="margin-top:14px;max-width:400px;" data-img="oral-presenter-certificate" data-alt="Oral Presenter certificate, AMER" data-fit="contain">
             <div class="ph-content"><div class="ph-label">BEST STUDENT CERTIFICATE<br>REPLACE WITH MY CERTIFICATE</div></div>
           </div>
         </div>
@@ -1035,7 +1039,7 @@ footer{border-top:1px solid var(--border-soft);padding:44px 0 34px;margin-top:40
           <span class="tl-date mono">JUNE 2026</span>
           <h4>Oral Presenter</h4>
           <div class="tl-issuer">14th Asia-Pacific International Conference on Environment-Behaviour Studies — Association of Malaysian Environment-Behaviour Researchers (AMER)</div>
-          <div class="img-frame wide" style="margin-top:14px;max-width:400px;">
+          <div class="img-frame wide" style="margin-top:14px;max-width:400px;" data-img="oral-presenter-certificate" data-alt="Oral Presenter certificate, AMER" data-fit="contain">
             <div class="ph-content"><div class="ph-label">ORAL PRESENTER CERTIFICATE<br>REPLACE WITH MY CERTIFICATE</div></div>
           </div>
         </div>
@@ -1046,7 +1050,7 @@ footer{border-top:1px solid var(--border-soft);padding:44px 0 34px;margin-top:40
           <div class="tl-issuer">The Korea Times</div>
           <p style="font-size:13.5px;">Certificate of Participation.</p>
           <span class="note-tag">Certificate of participation — not a placement or award</span>
-          <div class="img-frame wide" style="margin-top:14px;max-width:400px;">
+          <div class="img-frame wide" style="margin-top:14px;max-width:400px;" data-img="korean-contest-certificate" data-alt="Korean Language Speaking Contest certificate of participation" data-fit="contain">
             <div class="ph-content"><div class="ph-label">KOREAN LANGUAGE SPEAKING CONTEST CERTIFICATE<br>REPLACE WITH MY CERTIFICATE</div></div>
           </div>
         </div>
@@ -1056,7 +1060,7 @@ footer{border-top:1px solid var(--border-soft);padding:44px 0 34px;margin-top:40
           <h4>Korean Immigration Integration Program (KIIP) — Level 4</h4>
           <div class="tl-issuer">Ministry of Justice, South Korea</div>
           <p style="font-size:13.5px;">Result: 86 / 100</p>
-          <div class="img-frame wide" style="margin-top:14px;max-width:400px;">
+          <div class="img-frame wide" style="margin-top:14px;max-width:400px;" data-img="kiip-certificate" data-alt="KIIP Level 4 certificate" data-fit="contain">
             <div class="ph-content"><div class="ph-label">KIIP CERTIFICATE<br>REPLACE WITH MY CERTIFICATE</div></div>
           </div>
         </div>
@@ -1157,11 +1161,35 @@ footer{border-top:1px solid var(--border-soft);padding:44px 0 34px;margin-top:40
     mobileMenu.classList.toggle('show', open);
   });
 
+  // Auto-swap placeholders for real photos found in images/<name>.(jpg|jpeg|png|webp)
+  function loadFrameImages(page){
+    if(!page) return;
+    page.querySelectorAll('.img-frame[data-img]:not([data-tried])').forEach(function(frame){
+      frame.setAttribute('data-tried','1');
+      var name = frame.getAttribute('data-img');
+      var exts = ['jpg','jpeg','png','webp'];
+      (function tryNext(i){
+        if(i >= exts.length) return;
+        var img = new Image();
+        img.onload = function(){
+          frame.classList.add('has-img');
+          frame.innerHTML = '';
+          img.alt = frame.getAttribute('data-alt') || '';
+          img.loading = 'lazy';
+          img.style.objectFit = frame.getAttribute('data-fit') || 'cover';
+          frame.appendChild(img);
+        };
+        img.onerror = function(){ tryNext(i + 1); };
+        img.src = 'images/' + name + '.' + exts[i];
+      })(0);
+    });
+  }
+
   function setRoute(route){
     if(routes.indexOf(route) === -1) route = "home";
     document.querySelectorAll('.page').forEach(function(p){ p.classList.remove('visible'); });
     var target = document.getElementById('page-'+route);
-    if(target) target.classList.add('visible');
+    if(target){ target.classList.add('visible'); loadFrameImages(target); }
     document.querySelectorAll('[data-route]').forEach(function(a){
       a.classList.toggle('active', a.getAttribute('data-route') === route);
     });
